@@ -1,0 +1,105 @@
+$screen-xs-max: 375px;
+$screen-sm-max: 768px;
+$screen-md-max: 992px;
+$screen-lg-max: 1200px;
+@mixin xs {
+  @media (min-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+$Waterspout: (#a5f1f6);
+$Water: (#d0faf9);
+$Bubbles: (#e8ffff);
+$Milk: (#fffff3);
+$Cornsilk: (#fff4df);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: linear-gradient(to top right, $Water, $Bubbles);
+}
+
+body {
+  background-image: url(./media/windows.jpg);
+}
+
+.root {
+  height: 100%;
+  // width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.task-bar {
+  // width: 100%;
+  // height: 8vh;
+  // background-color: grey;
+  // position: fixed;
+
+  // bottom: 0%;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  background: rgb(68, 142, 230);
+  background: linear-gradient(
+    180deg,
+    rgba(68, 142, 230, 1) 0%,
+    rgba(36, 93, 216, 1) 15%,
+    rgba(36, 94, 220, 1) 85%,
+    rgba(25, 67, 168, 1) 100%
+  );
+  border-top: 1px solid #0f4575;
+}
+
+.image-window {
+  // width: 100%;
+  height: 15rem;
+
+  & img {
+    border: 2px #0831d9 solid;
+    height: 100%;
+  }
+}
+
+.stbtn {
+  font-family: Tahoma, "Noto Sans", sans-serif;
+  display: inline-block;
+  font-size: 0.8rem;
+  height: 100%;
+  padding: 0.3rem;
+  &:hover {
+    background-color: #0831d9;
+    color: white;
+  }
+}
+
+.window-section {
+  font-family: Tahoma, "Noto Sans", sans-serif;
+
+  hr {
+    height: 2px;
+    background: linear-gradient(to right, #0831d9, white);
+  }
+}
